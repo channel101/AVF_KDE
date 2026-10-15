@@ -1,0 +1,2 @@
+export KWIN_DRM_USE_MODIFIERS=0
+export WLR_RENDERER=gles2

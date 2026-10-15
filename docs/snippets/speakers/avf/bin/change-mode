@@ -1,0 +1,46 @@
+#!/bin/bash
+
+set -euo pipefail
+
+if [ -z "$1" ]; then
+  echo "Usage: change-mode <mode-number>"
+  echo "  1 : Quality Priority (default)"
+  echo "  2 : Speed Priority (minimum latency)"
+  echo "  3 : Stability Profile (compatibility focused)"
+  echo "  4 : Mono Profile (single-channel audio)"
+  exit 1
+fi
+
+MODE="$1"
+
+if [[ ! "$MODE" =~ ^[1-4]$ ]]; then
+  echo "[FAIL] Enter one of the following mode numbers: 1, 2, 3, or 4."
+  exit 1
+fi
+
+SERVICE_FILE="$HOME/.config/systemd/user/audio_connect.service"
+
+if [ ! -f "$SERVICE_FILE" ]; then
+  echo "[FAIL] Service file was not found: $SERVICE_FILE"
+  exit 1
+fi
+
+if ! grep -Eq -- '--mode[[:space:]]+[0-9]+' "$SERVICE_FILE"; then
+  echo "[FAIL] Could not find a --mode setting in the service file: $SERVICE_FILE"
+  exit 1
+fi
+
+sed -i -E "s/(--mode\s+)[0-9]+/\1$MODE/" "$SERVICE_FILE"
+
+echo "[Info] Service file updated successfully (--mode $MODE)."
+echo "[Info] Restarting audio_connect.service..."
+
+systemctl --user daemon-reload
+systemctl --user restart audio_connect.service
+
+sleep 1.5
+
+echo "=============================="
+echo " [PASS] Mode update completed successfully."
+echo "=============================="
+systemctl --user status audio_connect.service --no-pager | grep -E "Active:"

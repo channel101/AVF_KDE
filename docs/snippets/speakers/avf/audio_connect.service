@@ -1,0 +1,15 @@
+[Unit]
+Description=audio connect helper
+BindsTo=pipewire-pulse.service
+After=pipewire.service pipewire-pulse.service wireplumber.service
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/audio_connect.sh --mode 1
+Restart=on-failure
+RestartSec=3
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=default.target

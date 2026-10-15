@@ -1,0 +1,57 @@
+{
+  "AutoplayAllowed": true,
+  "MetricsReportingEnabled": false,
+  "BrowserSignin": 1,
+  "BookmarkBarEnabled": false,
+  "SyncDisabled": false,
+  "SearchSuggestEnabled": false,
+  "SpellCheckServiceEnabled": false,
+  "SafeBrowsingExtendedReportingEnabled": false,
+  "DefaultThirdPartyCookieSetting": 2,
+  "EnableMediaRouter": false,
+  "StartupBrowserWindowLaunchSuppressed": true,
+  "BackgroundModeEnabled": false,
+  "AutofillAddressEnabled": false,
+  "AutofillCreditCardEnabled": false,
+  "PasswordManagerEnabled": false,
+  "CreateThemesSettings": 2,
+  "HelpMeWriteSettings": 2,
+  "HistorySearchSettings": 2,
+  "GenAILocalFoundationalModelSettings": 1,
+  "GenAiDefaultSettings": 2,
+  "AIModeSettings": 1,
+  "LensOverlaySettings": 1,
+  "SearchContentSharingSettings": 1,
+  "ExtensionInstallForcelist": [
+    "jinjaccalgkegednnccohejagnlnfdag",
+    "pbbiecccbghiolgifmlichmgpoclijfa"
+  ],
+  "3rdparty": {
+    "extensions": {
+      "jinjaccalgkegednnccohejagnlnfdag": {
+      	"installation_mode": "force_installed",
+      	"allowed_permissions": [
+      	  "userScripts",
+      	  "tabs",
+      	  "storage"
+      	],
+      	"runtime_allowed_hosts": [
+      	  "<all_urls>"
+      	]
+      },
+      "pbbiecccbghiolgifmlichmgpoclijfa": {
+      	"installation_mode": "force_installed",
+        "runtime_allowed_host_permissions": ["*://*/*"]
+      }
+    }
+  },
+  "NTPFooterManagementNoticeEnabled": false,
+  "EnableManagementNotice": false,
+  "NTPFooterExtensionAttributionEnabled": false,
+  "RestoreOnStartup": {
+    "value": 5
+  },
+  "TopChromeToastRefinements": {
+    "value": false
+  }
+}

@@ -1,0 +1,1 @@
+KWIN_DRM_NO_AMS=1

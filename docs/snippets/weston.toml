@@ -1,0 +1,7 @@
+[core]
+idle-time=0
+require-input=false
+
+# Prevent DRM backend conflicts (if needed)
+[shell]
+locking=false
