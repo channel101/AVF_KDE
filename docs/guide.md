@@ -1,4 +1,4 @@
-## Advanced Guides
+# Advanced Guides
 > Optional Features & Configurations & Bug fixes
 
 > [!NOTE]
@@ -82,7 +82,9 @@ adb shell am set-standby-bucket com.android.virtualization.terminal active
 
 1. Open `/etc/environment` in a text editor.
 2. Add the following line.
-[color.sh](./snippets/environment/color.sh)
+```console
+KWIN_DRM_NO_AMS=1
+```
 3. Save & close.
 
 > [!TIP]
@@ -242,3 +244,18 @@ export XMODIFIERS=@im=fcitx
 ```console
 fcitx5-config-qt
 ```
+
+---
+
+### Un-italicize desktop icon symlink text
+> Reference: [discuss.kde.org](https://discuss.kde.org/t/how-to-un-italicize-desktop-icon-symlink-text/1054)
+1. Use the following command to un-italicize the desktop symlink text:
+
+```console
+sed -i '/font.italic: model.isLink/d' /usr/share/plasma/plasmoids/org.kde.desktopcontainment/contents/ui/FolderItemDelegate.qml
+```
+
+2. Done.
+
+> [!NOTE]
+> The setting will be applied after reboot.
