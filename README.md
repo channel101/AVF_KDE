@@ -4,8 +4,7 @@ This project provides comprehensive, step-by-step documentation for installing, 
 
 ---
 
-<img alt="LICENSE: MIT" src="https://img.shields.io/github/license/channel101/AVF_KDE?style=for-the-badge&logo=opensourceinitiative&logoColor=white">
-
+<a href="LICENSE"><img alt="GitHub License" src="https://img.shields.io/github/license/channel101/AVF_KDE?style=for-the-badge&logo=opensourceinitiative&logoColor=white"></a>
 
 ## Table of Contents
 
@@ -29,7 +28,9 @@ Please follow the setup guide first before moving on to the advanced tweaks.
 
 ## 🤝 Contributing
 
-If you found a better way to optimize anything in this repo, feel free to open a Pull Request or Create an Issue.
+If you found a better way to optimize anything in this repo, **feel free to open a Pull Request or Create an Issue.**
+
+> Copyright (c) 2026 @channel101
 
 ---
 *Disclaimer: This project is for experimental purposes. Modifying virtualization settings and running VMs on Android may cause device instability or data loss. Proceed at your own risk.*
