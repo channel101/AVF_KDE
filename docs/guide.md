@@ -199,10 +199,10 @@ sudo chmod -R 755 ~/.local/bin/
 mkdir -p ~/.config/systemd/user/
 sudo chmod -R 755 ~/.config/systemd/user/
 ```
-9. Put [audio_connect.service](./snippets/speakers/avf/audio_connect.service) into `/etc/systemd/system/`.
+9. Put [audio_connect.service](./snippets/speakers/avf/audio_connect.service) into `~/.config/systemd/user/`.
 10. Use the following commands to enable and start the audio service.
 ```console
-sudo systemctl --now enable pipewire pipewire-pulse wireplumber
+systemctl --user --now enable pipewire pipewire-pulse wireplumber
 systemctl --user daemon-reload
 systemctl --user enable --now audio_connect.service
 systemctl --user start audio_connect.service
