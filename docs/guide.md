@@ -259,3 +259,31 @@ sed -i '/font.italic: model.isLink/d' /usr/share/plasma/plasmoids/org.kde.deskto
 
 > [!NOTE]
 > The setting will be applied after reboot.
+
+---
+
+### Fix `Cannot refresh cache whilst offline` in `Discover` App
+
+1. **Replace** `/etc/netplan/50-cloud-init.yaml` to the following file content
+
+```yaml
+network:
+  renderer: NetworkManager
+  version: 2
+  ethernets:
+    all-en:
+      match:
+        name: "en*"
+      dhcp4: true
+      dhcp4-overrides:
+        use-domains: true
+      dhcp6: true
+      dhcp6-overrides:
+        use-domains: true
+
+```
+
+2. Run the following command and press **<kbd>Enter</kbd>** before countdown ends
+```console
+sudo netplan apply
+```
