@@ -1,3 +1,8 @@
+---
+permalink: /index.html
+title: "KDE Plasma 6 on AVF"
+---
+
 # KDE Plasma 6 on AVF
 
 This project provides comprehensive, step-by-step documentation for installing, configuring, and running the **KDE Plasma 6** desktop environment on your Android device using the native Android Virtualization Framework (AVF).
