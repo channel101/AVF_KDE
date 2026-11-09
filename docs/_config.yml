@@ -1,9 +1,9 @@
 title: KDE Plasma 6 on AVF
 description: Using KDE Plasma 6 desktop On Android Virtualization Framework
+show_downloads: false
+exclude: ["README.md"]
+remote_theme: pages-themes/slate
+
 plugins:
-  - jekyll-remote-theme
   - jekyll-gfm-admonitions
   - jekyll-redirect-from
-show_downloads: false
-remote_theme: pages-themes/slate@v0.2.0
-exclude: ["README.md"]
