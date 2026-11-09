@@ -1,9 +1,6 @@
 source "https://rubygems.org"
+gem "github-pages", group: :jekyll_plugins
 gem "webrick"
 group :jekyll_plugins do
-    gem "jekyll-remote-theme"
-    gem "jekyll-gfm-admonitions"
-    gem "jekyll-redirect-from"
-    gem "jekyll-seo-tag"
-    gem "github-pages"
+  gem "jekyll-gfm-admonitions"
 end
