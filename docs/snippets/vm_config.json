@@ -1,0 +1,47 @@
+{
+  "name": "debian",
+  "disks": [
+    {
+      "partitions": [
+        {
+          "label": "ROOT",
+          "path": "$PAYLOAD_DIR/root_part",
+          "writable": true,
+          "guid": "4CBC5241-06BA-400B-A522-F38C3D652006"
+        }
+      ],
+      "writable": true
+    },
+    {
+      "image": "$PAYLOAD_DIR/cidata.iso"
+    }
+  ],
+  "sharedPath": [
+    {
+      "sharedPath": "/storage/emulated"
+    },
+    {
+      "sharedPath": "$APP_DATA_DIR/files"
+    }
+  ],
+  "kernel": "$PAYLOAD_DIR/vmlinuz",
+  "initrd": "$PAYLOAD_DIR/initrd.img",
+  "params": "root=/dev/vda1 ds=nocloud arm64.nompam 8250.nr_uarts=4 console=ttyS0 vmalloc=1024M virtio_gpu.dma_mmap=1 snd_virtio.debug=0 rw",
+  "protected": false,
+  "cpu_topology": "match_host",
+  "memory_mib": 4096,
+  "debuggable": true,
+  "connect_console": true,
+  "console_out": true,
+  "console_input_device": "ttyS0",
+  "network": true,
+  "auto_memory_balloon": false,
+  "gpu": {
+    "backend": "virglrenderer"
+  },
+  "audio": {
+    "microphone": true,
+    "speaker": true
+  },
+  "boot_timeout_secs": 120
+}
