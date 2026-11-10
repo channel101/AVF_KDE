@@ -26,8 +26,8 @@ Please follow the setup guide first before moving on to the advanced tweaks.
 
 | Documentation                             | Description                                                                                               |
 | :---------------------------------------- | :-------------------------------------------------------------------------------------------------------- |
-| **[Setup Instructions](./docs/setup.md)** | The core step-by-step guide to setting up the AVF, installing the base KDE Plasma 6 Desktop.              |
-| **[Additional Guides](./docs/guide.md)**  | Advanced tutorials, performance optimizations, customization tips, and troubleshooting for common issues. |
+| **[Setup Instructions](./setup.md)** | The core step-by-step guide to setting up the AVF, installing the base KDE Plasma 6 Desktop.              |
+| **[Additional Guides](./guide.md)**  | Advanced tutorials, performance optimizations, customization tips, and troubleshooting for common issues. |
 
 ---
 
