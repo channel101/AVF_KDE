@@ -3,6 +3,7 @@ description: Using KDE Plasma 6 desktop On Android Virtualization Framework
 show_downloads: false
 exclude: ["README.md"]
 remote_theme: pages-themes/slate
+markdown: GFM
 
 plugins:
   - jekyll-gfm-admonitions
