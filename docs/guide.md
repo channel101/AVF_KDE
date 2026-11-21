@@ -81,8 +81,12 @@ adb shell am set-standby-bucket com.android.virtualization.terminal active
 > **If the above steps do not apply, use the following as the final step:**
 >
 > 1. Open `/etc/environment` in a text editor.
-> 2. Add the following lines. [renderer.sh](./snippets/environment/renderer.sh)
-> 3. Save & close.
+> 2. Add the following lines.
+> ```env
+> export KWIN_DRM_USE_MODIFIERS=0
+> export WLR_RENDERER=gles2
+> ```
+> 4. Save & close.
 
 ---
 
@@ -93,7 +97,7 @@ adb shell am set-standby-bucket com.android.virtualization.terminal active
 1. Open `/etc/environment` in a text editor.
 2. Add the following line.
 
-```console
+```env
 KWIN_DRM_NO_AMS=1
 ```
 
@@ -240,7 +244,7 @@ systemctl --user status audio_connect.service
 
 11. Add the following line to `~/.bashrc`.
 
-```console
+```env
 export PATH="$HOME/.local/bin:$PATH"
 ```
 
@@ -267,7 +271,7 @@ im-config -n fcitx5
 
 3. Add the following line to `~/.bashrc`.
 
-```console
+```env
 export XMODIFIERS=@im=fcitx
 ```
 
