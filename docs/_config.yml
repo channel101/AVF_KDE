@@ -4,6 +4,7 @@ show_downloads: false
 exclude: ["README.md"]
 remote_theme: pages-themes/slate
 markdown: GFM
+url: "https://channel101.github.io"
 
 plugins:
   - jekyll-gfm-admonitions
